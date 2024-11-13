@@ -1,0 +1,10 @@
+# Add here the pip packages you would like to install on this virtual environment / kernel
+pip 
+torch==2.4.1 
+torchvision==0.19.1 
+torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/rocm6.1
+torchcodec
+h5py
+pyarrow
+nvidia-dali-cuda120
+tqdm
