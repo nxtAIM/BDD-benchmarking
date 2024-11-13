@@ -2,20 +2,6 @@
 
 This repository contains the code used for benchmarking the BDD dataset. We evaluate dataset access performance using direct file system access with torchcodec, alongside h5py, PyArrow, and NVIDIA DALI.
 
-## Libraries Used
-
-- **File System Access with TorchCodec**  
-  [torchcodec GitHub](https://github.com/pytorch/torchcodec)
-
-- **HDF5 File Handling with h5py**  
-  [h5py Documentation](https://docs.h5py.org/en/latest/quick.html)
-
-- **Data Loading with NVIDIA DALI**  
-  [DALI PyTorch Example](https://docs.nvidia.com/deeplearning/dali/user-guide/docs/examples/frameworks/pytorch/pytorch-basic_example.html)
-
-- **Columnar Data Format with PyArrow**  
-  [PyArrow Documentation](https://arrow.apache.org/docs/python/index.html)
-
 ## Data Preprocessing Steps
 
 1. **Weather and Time Filtering**:  
@@ -32,9 +18,29 @@ This repository contains the code used for benchmarking the BDD dataset. We eval
 
 After the preprocessing steps, the dataset size is reduced from 100k videos to around 2k videos, resulting in a total of 396,839 frames.
 
+## Libraries Used
+
+- **File System Access with TorchCodec**  
+  [torchcodec GitHub](https://github.com/pytorch/torchcodec)
+
+- **HDF5 File Handling with h5py**  
+  [h5py Documentation](https://docs.h5py.org/en/latest/quick.html)
+
+- **Data Loading with NVIDIA DALI**  
+  [DALI PyTorch Example](https://docs.nvidia.com/deeplearning/dali/user-guide/docs/examples/frameworks/pytorch/pytorch-basic_example.html)
+
+- **Columnar Data Format with PyArrow**  
+  [PyArrow Documentation](https://arrow.apache.org/docs/python/index.html)
+  
 ## Benchmarking
 
 The benchmarking is conducted using 4 GPUs for parallel processing.
+
+## Setup
+Clone the Repository and set up the environment, run:
+```sh
+bash env/setup.sh
+```
 
 ## Results
 
